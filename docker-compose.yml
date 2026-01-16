@@ -1,0 +1,16 @@
+services:
+  backend:
+    build: ./backend
+    container_name: air_backend
+    ports:
+      - "8000:8000"
+    environment:
+      - ENV=prod
+
+  frontend:
+    build: ./frontend
+    container_name: air_frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - ENV=prod
